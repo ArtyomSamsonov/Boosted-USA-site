@@ -1,0 +1,25 @@
+.header__container {
+    display: flex;
+    color: #000000;
+    background-color: white;
+    font-size: 14px;
+    line-height: 21px;
+    font-style: normal;
+    font-weight: bold;
+    margin-left: 11px;
+}
+
+.header__container-logo {
+    align-items: center;
+    padding-top: 7px;
+    padding-right: 100px;
+}
+
+.wrap {
+    position: absolute;
+}
+
+.basket__image {
+    height: 20px;
+    position: absolute;
+}

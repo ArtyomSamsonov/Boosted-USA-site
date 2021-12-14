@@ -1,0 +1,60 @@
+.welcome-page {
+    display: block;
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+}
+
+.welcome-page__title {
+    font-style: normal;
+    font-weight: normal;
+    width: 100vw;
+    height: 51px;
+    margin-top: 80px;
+    font-size: 50px;
+    line-height: 51px;
+
+}
+
+.welcome-page__field {
+    font-style: normal;
+    font-weight: normal;
+    width: 100vw;
+    height: 19px;
+    margin-top: 15px;
+    font-size: 20px;
+    line-height: 19px;
+    color: #000000;
+}
+
+.welcome-page__button {
+    width: 200px;
+    height: 33px;
+    color: white;
+    background: #FF4A32;
+    border-radius: 35px;
+    margin: 15px;
+    outline: none;
+    border: none;
+    margin-bottom: 700px;
+}
+
+.welcome-page__button:hover {
+    opacity: 0.8;
+}
+
+.welcome-page__block {
+    position: absolute;
+    width: 100vw;
+    height: 83px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+}
+
+.welcome-page__block-sub {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
