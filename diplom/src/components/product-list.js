@@ -38,8 +38,7 @@ const ProductCard = ({product}) => {
     return (
         <Box as="article" m={2} p={2} minWidth={240} className='product-card__product-list'>
             <img src={scooter} alt={scooter} className='product-card__img'/>
-            <p><Link to={`/catalog/${product.id}`} style={{margin: 0, padding: 0}}>{product.title?.slice(0, 10)}</Link>
-            </p>
+            <Link to={`/catalog/${product.id}`} style={{margin: 0, padding: 0}}>{product.title?.slice(0, 10)}</Link>
             <Rating name="half-rating" defaultValue={2.5} precision={0.5}/>
             <ProductButton product={product}/>
         </Box>
@@ -51,7 +50,7 @@ export const ProductButton = ({product}) => {
     const isHasItem = basket?.findIndex(item => item.id === product.id)
 
     return (
-        <Button variant='contained' onClick={() => handleSetBasket(product)}>
+        <Button variant='contained'onClick={() => handleSetBasket(product)}>
             {isHasItem > -1 ? 'Удалить из корзины' : `в корзину ${product.price} р.`}
         </Button>
     )
