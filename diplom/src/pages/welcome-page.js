@@ -9,7 +9,7 @@ import image_4 from "../components/img/4.png";
 
 export const WelcomePage = () => {
     return (
-    <Layout>
+    <Layout withImage={true}>
       <div className={'welcome-page'}>
           <h1 className={'welcome-page__title'}>Welcome to Boosted USA</h1>
           <h2 className={'welcome-page__field'}>The Holy Grail of Electric Skateboards and One REVolutionary Scooter</h2>
