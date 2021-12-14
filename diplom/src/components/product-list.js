@@ -12,25 +12,31 @@ export const ProductList = ({size}) => {
         const tryAsync = async () => {
             try {
                 const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+                // const response = await fetch('https://mocki.io/v1/29c860e9-ac25-46a0-8ecd-5719bb951189')
                 const json = await response.json()
                 setProducts(json.map(product => ({...product, price: 15000})))
+                // setProducts(json.products)
             } catch (ex) {
                 console.error(ex)
             }
         }
 
         !products?.length && tryAsync()
-    }, [products, setProducts])
+    }, [])
 
-    const showProducts = (size && products?.filter((_, index) => size > index)) || products
+    // const showProducts = (size && products?.filter((_, index) => size > index)) || products
 
-    return (
-        <Box display="flex" flexWrap="wrap" justifyContent="center">
-            {showProducts?.map(product => (
-                <ProductCard key={product.id} product={product} basket={basket} handleSetBasket={handleSetBasket}/>
-            ))}
-        </Box>
-    )
+    if (!products) {
+        return <></>
+    } else {
+        return (
+            <Box display="flex" flexWrap="wrap" justifyContent="center">
+                {products && products?.map(product => (
+                    <ProductCard key={product.id} product={product} basket={basket} handleSetBasket={handleSetBasket}/>
+                ))}
+            </Box>
+        )
+    }
 }
 
 
@@ -50,7 +56,7 @@ export const ProductButton = ({product}) => {
     const isHasItem = basket?.findIndex(item => item.id === product.id)
 
     return (
-        <Button variant='contained'onClick={() => handleSetBasket(product)}>
+        <Button variant='contained' onClick={() => handleSetBasket(product)}>
             {isHasItem > -1 ? 'Удалить из корзины' : `в корзину ${product.price} р.`}
         </Button>
     )
