@@ -42,16 +42,16 @@ export const ProductList = ({size}) => {
 
 const ProductCard = ({product}) => {
     return (
-        <Box as="article" m={2} p={2} minWidth={240} className='product-card__product-list'>
-            <img src={scooter} alt={scooter} className='product-card__img'/>
-            <Link to={`/catalog/${product.id}`} style={{ textDecoration: 'none' }}>
+        <Link to={`/catalog/${product.id}`} style={{ textDecoration: 'none' }}>
+            <Box as="article" m={2} p={2} minWidth={240} className='product-card__product-list'>
+                <img src={scooter} alt={scooter} className='product-card__img'/>
                 <Typography color='primary' variant='h6' style={{margin: 0, padding: 0}}>
                     {product.title.length > 10 ? product.title?.toUpperCase().slice(0, 10) + ' [...]' : product.title.toUpperCase()}
                 </Typography>
-            </Link>
-            <Rating name="half-rating" defaultValue={2.5} precision={0.5}/>
-            <ProductButton product={product}/>
-        </Box>
+                <Rating name="half-rating" defaultValue={2.5} precision={0.5}/>
+                <ProductButton product={product}/>
+            </Box>
+        </Link>
     )
 }
 
@@ -59,8 +59,13 @@ export const ProductButton = ({product}) => {
     const {basket, handleSetBasket} = useContext(AppContext)
     const isHasItem = basket?.findIndex(item => item.id === product.id)
 
+    const handleClick = (e, product) => {
+        e.preventDefault()
+        handleSetBasket(product)
+    }
+
     return (
-        <Button variant='contained' onClick={() => handleSetBasket(product)}>
+        <Button variant='contained' onClick={(e) => handleClick(e, product)}>
             {isHasItem > -1 ? 'Удалить из корзины' : `в корзину ${product.price} р.`}
         </Button>
     )
