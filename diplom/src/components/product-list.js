@@ -1,5 +1,5 @@
 import React, {useContext, useEffect} from 'react'
-import {Box, Button, Rating} from '@mui/material'
+import {Box, Button, Rating, Typography} from '@mui/material'
 import {AppContext} from '../context'
 import {Link} from 'react-router-dom'
 import scooter from './img/scooter.jpg'
@@ -11,11 +11,11 @@ export const ProductList = ({size}) => {
     useEffect(() => {
         const tryAsync = async () => {
             try {
-                const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-                // const response = await fetch('https://mocki.io/v1/29c860e9-ac25-46a0-8ecd-5719bb951189')
+                // const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+                const response = await fetch('https://mocki.io/v1/5b109301-d684-42a5-a438-7779bfda9c22')
                 const json = await response.json()
-                setProducts(json.map(product => ({...product, price: 15000})))
-                // setProducts(json.products)
+                // setProducts(json.map(product => ({...product, price: 15000})))
+                setProducts(json.products)
             } catch (ex) {
                 console.error(ex)
             }
@@ -44,7 +44,11 @@ const ProductCard = ({product}) => {
     return (
         <Box as="article" m={2} p={2} minWidth={240} className='product-card__product-list'>
             <img src={scooter} alt={scooter} className='product-card__img'/>
-            <Link to={`/catalog/${product.id}`} style={{margin: 0, padding: 0}}>{product.title?.slice(0, 10)}</Link>
+            <Link to={`/catalog/${product.id}`} style={{ textDecoration: 'none' }}>
+                <Typography color='primary' variant='h6' style={{margin: 0, padding: 0}}>
+                    {product.title.length > 10 ? product.title?.toUpperCase().slice(0, 10) + ' [...]' : product.title.toUpperCase()}
+                </Typography>
+            </Link>
             <Rating name="half-rating" defaultValue={2.5} precision={0.5}/>
             <ProductButton product={product}/>
         </Box>

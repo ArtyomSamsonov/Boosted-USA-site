@@ -52,15 +52,18 @@ export const Header = () => {
                 </List>
             </Box>
             <div>
-                {isAuth && <Button onClick={onExit}>Exit</Button>}
+                {isAuth && <>
+                    <Button onClick={onExit}>Exit</Button>
 
-                <Button component={Link} to="/profilePage" color="primary" className='header__logo'>
-                    <AccountCircleIcon/>
-                </Button>
+                    <Button component={Link} to="/profilePage" color="primary" className='header__logo'>
+                        <AccountCircleIcon/>
+                    </Button>
 
-                <Button component={Link} to="/basket" color="primary" className='header__logo'>
-                    <ShoppingCartIcon/>
-                </Button>
+                    <Button component={Link} to="/basket" color="primary" className='header__logo'>
+                        <ShoppingCartIcon/>
+                    </Button>
+                </>}
+
             </div>
         </div>
     )

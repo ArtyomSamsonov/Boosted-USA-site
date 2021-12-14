@@ -18,7 +18,7 @@ export const AuthPage = () => {
   }
 
   if (isAuth) {
-    return <Navigate to="/profile" />
+    return <Navigate to="/" />
   }
 
   return (

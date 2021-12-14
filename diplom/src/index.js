@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import {RoutesMap} from './routes';
-import {createTheme, ThemeProvider, styled} from '@mui/material/styles';
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 
 const theme = createTheme({
     palette: {
