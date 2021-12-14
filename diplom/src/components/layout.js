@@ -11,6 +11,6 @@ export const Layout = ({children, withImage = false}) => (
                 {children}
             </div>
         </div>
-        <Footer/>
+        {/*<Footer/>*/}
     </div>
 )
