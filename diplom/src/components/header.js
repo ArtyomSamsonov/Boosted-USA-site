@@ -1,25 +1,27 @@
 import './header.css';
-import React, { useContext } from 'react'
-import { Box, styled } from '@mui/system'
-import { Link } from 'react-router-dom';
-import { Button } from '@mui/material';
-import { AppContext } from '../context';
+import React, {useContext} from 'react'
+import {Box, styled} from '@mui/system'
+import {Link} from 'react-router-dom';
+import {Button} from '@mui/material';
+import {AppContext} from '../context';
 import logo from './img/logo.png';
 import image from './img/shopping-cart-empty-side-view-svgrepo-com.svg';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const nav = [
-  {
-    to: '/',
-    text: 'ELECTRIC SKATEBOARDS',
-  },
-  {
-    to: '/catalog',
-    text: 'ELECTRIC SCOOTERS',
-  },
-  {
-    to: '/catalog',
-    text: 'ACCESSORIES',
-  },
+    {
+        to: '/',
+        text: 'ELECTRIC SKATEBOARDS',
+    },
+    {
+        to: '/catalog',
+        text: 'ELECTRIC SCOOTERS',
+    },
+    {
+        to: '/catalog',
+        text: 'ACCESSORIES',
+    },
     {
         to: '/catalog',
         text: 'GIFT CARD',
@@ -31,47 +33,49 @@ const nav = [
 ]
 
 export const Header = () => {
-  const { onExit, isAuth, basket } = useContext(AppContext)
+    const {onExit, isAuth, basket} = useContext(AppContext)
 
-  return (
-    <div className={'header__container'}>
-      <div className="header__container-logo">
-        <img src={logo} alt={logo} />
-      </div>
-      <Box component="nav" py={2}>
-        <List className={'header__list'} component="ul" mx={-2}>
-          {nav.map(({ to, text }) => (
-            <Box component="li" mx={2} key={text}>
-              <LinkText to={to}>{text}</LinkText>
+    return (
+        <div className={'header__container'}>
+            <div className="header__container-logo">
+                <Link to="/">
+                    <img src={logo} alt={logo}/>
+                </Link>
+            </div>
+            <Box component="nav" py={2}>
+                <List className={'header__list'} component="ul" mx={-2}>
+                    {nav.map(({to, text}) => (
+                        <Box component="li" mx={2} key={text}>
+                            <LinkText to={to}>{text}</LinkText>
+                        </Box>
+                    ))}
+                </List>
             </Box>
-          ))}
-        </List>
-      </Box>
-        {isAuth && <Box><Button onClick={onExit}>Exit</Button></Box>}
-      <Box>
-          <svg width="20" height="20" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.46 9C17.4601 7.60325 17.1142 6.22823 16.4534 4.99767C15.7927 3.76711 14.8375 2.71929 13.6732 1.94776C12.5088 1.17623 11.1716 0.704973 9.78082 0.576067C8.39003 0.447161 6.98896 0.664612 5.70267 1.20901C4.41638 1.75341 3.28489 2.60782 2.4092 3.69597C1.5335 4.78412 0.940854 6.07216 0.684148 7.44512C0.427442 8.81808 0.514667 10.2332 0.938036 11.5643C1.3614 12.8953 2.10775 14.1008 3.11044 15.0732C4.67848 16.5955 6.77548 17.4509 8.96091 17.4596C11.1463 17.4683 13.2501 16.6297 14.8302 15.12C14.8649 15.0972 14.8953 15.0686 14.9202 15.0354C15.7244 14.2494 16.3633 13.3105 16.7994 12.2741C17.2356 11.2376 17.4602 10.1245 17.46 9ZM9.00004 1.26C10.4969 1.26113 11.9612 1.69624 13.2158 2.51264C14.4704 3.32904 15.4613 4.49169 16.0686 5.85978C16.6758 7.22786 16.8734 8.74268 16.6373 10.2208C16.4012 11.6988 15.7417 13.0767 14.7384 14.1876C14.3402 13.3984 13.7827 12.7004 13.1011 12.1374C12.4195 11.5745 11.6287 11.159 10.7784 10.917C11.4835 10.5226 12.0378 9.90556 12.3545 9.16241C12.6713 8.41927 12.7326 7.59205 12.5288 6.81034C12.325 6.02863 11.8677 5.33659 11.2285 4.84263C10.5893 4.34868 9.80427 4.08071 8.99644 4.08071C8.18861 4.08071 7.4036 4.34868 6.76438 4.84263C6.12516 5.33659 5.66784 6.02863 5.46408 6.81034C5.26031 7.59205 5.3216 8.41927 5.63835 9.16241C5.9551 9.90556 6.50941 10.5226 7.21444 10.917C6.36397 11.159 5.57293 11.5747 4.89132 12.138C4.20971 12.7012 3.65234 13.3998 3.25444 14.1894C1.96375 12.7701 1.25211 10.9184 1.26004 9C1.26004 6.94722 2.0755 4.97852 3.52703 3.52699C4.97857 2.07546 6.94727 1.26 9.00004 1.26ZM9.00004 10.665C8.42023 10.665 7.85346 10.493 7.37144 10.1708C6.88942 9.84853 6.51383 9.39054 6.29219 8.85476C6.07056 8.31899 6.01284 7.72951 6.12635 7.16092C6.23986 6.59233 6.51949 6.07019 6.92985 5.66058C7.34022 5.25098 7.86287 4.97231 8.43167 4.85985C9.00046 4.74739 9.58984 4.80619 10.1252 5.02882C10.6606 5.25144 11.1179 5.62788 11.4392 6.11049C11.7606 6.5931 11.9315 7.16019 11.9304 7.74C11.9285 8.51611 11.619 9.2598 11.0697 9.80809C10.5204 10.3564 9.77615 10.6645 9.00004 10.665ZM3.80164 14.7312C4.2557 13.7335 4.98728 12.8875 5.90905 12.2942C6.83083 11.701 7.90386 11.3855 9.00004 11.3855C10.0962 11.3855 11.1693 11.701 12.091 12.2942C13.0128 12.8875 13.7444 13.7335 14.1984 14.7312C12.776 16.0245 10.9225 16.7411 9.00004 16.7411C7.07755 16.7411 5.22409 16.0245 3.80164 14.7312Z" fill="black"/>
-          </svg>
+            <div>
+                {isAuth && <Button onClick={onExit}>Exit</Button>}
 
-          <div class="wrap">
-              <img className={'basket__image'} src={image} alt={basket} />
-          </div>
-        <Link to="/basket">Basket {basket?.length ? basket?.length : ''}</Link>
-      </Box>
-    </div>
-  )
+                <Button component={Link} to="/profilePage" color="primary" className='header__logo'>
+                    <AccountCircleIcon/>
+                </Button>
+
+                <Button component={Link} to="/basket" color="primary" className='header__logo'>
+                    <ShoppingCartIcon/>
+                </Button>
+            </div>
+        </div>
+    )
 }
 
 const List = styled(Box)({
-  display: 'flex',
-  listStyle: 'none',
-  margin: 0,
-  padding: 0,
+    display: 'flex',
+    listStyle: 'none',
+    margin: 0,
+    padding: 0,
 })
 
 const LinkText = styled(Link)({
-  color: 'black',
-  fontWeight: 'normal',
-  fontSize: 16,
-  textDecoration: 'none',
+    color: 'black',
+    fontWeight: 'normal',
+    fontSize: 16,
+    textDecoration: 'none',
 })
