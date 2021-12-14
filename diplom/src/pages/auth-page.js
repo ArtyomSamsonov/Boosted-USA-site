@@ -4,6 +4,7 @@ import React, { useContext, useState } from 'react'
 import { Navigate } from 'react-router'
 import { Layout } from '../components/layout'
 import { AppContext } from '../context'
+import './auth-page.css'
 
 export const AuthPage = () => {
   const { onAuth, isAuth } = useContext(AppContext)
@@ -22,9 +23,9 @@ export const AuthPage = () => {
 
   return (
     <Layout>
-      <div>
-        <Box display="flex" alignItems="center" justifyContent="center" flex={1} style={{ width: '600px', height: '300px', backgroundColor: 'rgba(255, 255, 255, 0.8)' }}>
-          <Box width="100%" maxWidth={400} component="form" display="flex" flexDirection="column" style={{ margin: '15px'}} onSubmit={onLogin}>
+      <div className='authPage__container'>
+        <div className='authPage__outer'>
+          <Box component="form" className='authPage__inner' onSubmit={onLogin}>
             <TextField
               label="Login"
               value={login}
@@ -40,7 +41,7 @@ export const AuthPage = () => {
             />
             <Button type="submit">Sign in</Button>
           </Box>
-        </Box>
+        </div>
       </div>
     </Layout>
   )
