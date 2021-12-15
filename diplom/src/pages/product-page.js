@@ -3,6 +3,8 @@ import { useParams } from 'react-router-dom'
 import { Layout } from '../components/layout'
 import { ProductButton } from '../components/product-list'
 import { AppContext } from '../context'
+import scooter from "../components/img/scooter.jpg"
+import '../components/product-page.css'
 
 export const ProductPage = ({ location }) => {
   const { products } = useContext(AppContext)
@@ -25,9 +27,11 @@ export const ProductPage = ({ location }) => {
 
   return (
     <Layout>
-      <div>
-        <p>{product?.title}</p>
-        <p>{product?.body}</p>
+      <div className={'product-page__info'}>
+        <img src={scooter} alt={scooter} className='product-page__img'/>
+        <p className={'product-page__title'}>{product?.title}</p>
+        <p className={'product-page__price'}>Price: {product?.price} $</p>
+        <p className={'product-page__body'}>{product?.body}</p>
         <ProductButton product={product} />
       </div>
     </Layout>

@@ -13,10 +13,10 @@ const nav = [
         to: '/skater',
         text: 'ELECTRIC SKATEBOARDS',
     },
-    {
-        to: '/catalog',
-        text: 'ELECTRIC SCOOTERS',
-    },
+    // {
+    //     to: '/catalog',
+    //     text: 'ELECTRIC SCOOTERS',
+    // },
     {
         to: '/catalog',
         text: 'CATALOGUE',

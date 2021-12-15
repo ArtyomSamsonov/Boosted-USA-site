@@ -11,10 +11,8 @@ export const ProductList = ({size}) => {
     useEffect(() => {
         const tryAsync = async () => {
             try {
-                // const response = await fetch('https://jsonplaceholder.typicode.com/posts')
                 const response = await fetch('https://mocki.io/v1/7983ad3b-0d7e-4a0d-aebf-c62b1e58b44f')
                 const json = await response.json()
-                // setProducts(json.map(product => ({...product, price: 15000})))
                 setProducts(json.products)
             } catch (ex) {
                 console.error(ex)
@@ -23,8 +21,6 @@ export const ProductList = ({size}) => {
 
         !products?.length && tryAsync()
     }, [])
-
-    // const showProducts = (size && products?.filter((_, index) => size > index)) || products
 
     if (!products) {
         return <></>
