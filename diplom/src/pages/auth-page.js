@@ -26,13 +26,14 @@ export const AuthPage = () => {
       <div className='authPage__container'>
         <div className='authPage__outer'>
           <Box component="form" className='authPage__inner' onSubmit={onLogin}>
-            <TextField
+            <h2>AUTHORIZATION</h2>
+            <TextField style={{ marginBottom: '15px'}}
               label="Login"
               value={login}
               onChange={(e) => setLogin(e.target.value)}
               size="medium"
             />
-            <TextField
+            <TextField style={{ marginBottom: '15px'}}
               label="Password"
               type="password"
               value={password}

@@ -19,7 +19,7 @@ const nav = [
     },
     {
         to: '/catalog',
-        text: 'ACCESSORIES',
+        text: 'CATALOGUE',
     },
     {
         to: '/catalog',
@@ -27,7 +27,7 @@ const nav = [
     },
     {
         to: '/profile',
-        text: 'MORE INFO',
+        text: 'AUTHORIZATION'
     },
 ]
 

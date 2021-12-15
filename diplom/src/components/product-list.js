@@ -12,7 +12,7 @@ export const ProductList = ({size}) => {
         const tryAsync = async () => {
             try {
                 // const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-                const response = await fetch('https://mocki.io/v1/5b109301-d684-42a5-a438-7779bfda9c22')
+                const response = await fetch('https://mocki.io/v1/7983ad3b-0d7e-4a0d-aebf-c62b1e58b44f')
                 const json = await response.json()
                 // setProducts(json.map(product => ({...product, price: 15000})))
                 setProducts(json.products)
@@ -46,7 +46,7 @@ const ProductCard = ({product}) => {
             <Box as="article" m={2} p={2} minWidth={240} className='product-card__product-list'>
                 <img src={scooter} alt={scooter} className='product-card__img'/>
                 <Typography color='primary' variant='h6' style={{margin: 0, padding: 0}}>
-                    {product.title.length > 10 ? product.title?.toUpperCase().slice(0, 10) + ' [...]' : product.title.toUpperCase()}
+                    {product.title.length > 21 ? product.title?.toUpperCase().slice(0, 21) + ' ...' : product.title.toUpperCase()}
                 </Typography>
                 <Rating name="half-rating" defaultValue={2.5} precision={0.5}/>
                 <ProductButton product={product}/>
