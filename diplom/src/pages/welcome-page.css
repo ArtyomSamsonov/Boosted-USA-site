@@ -1,5 +1,4 @@
 .welcome-page {
-    display: block;
     justify-content: center;
     text-align: center;
     color: #000000;
@@ -13,7 +12,6 @@
     margin-top: 80px;
     font-size: 50px;
     line-height: 51px;
-
 }
 
 .welcome-page__field {
@@ -42,19 +40,3 @@
 .welcome-page__button:hover {
     opacity: 0.8;
 }
-
-/*.welcome-page__block {*/
-/*    position: absolute;*/
-/*    width: 100vw;*/
-/*    height: 83px;*/
-/*    background: #000000;*/
-/*    display: flex;*/
-/*    justify-content: center;*/
-/*}*/
-
-/*.welcome-page__block-sub {*/
-/*    display: flex;*/
-/*    justify-content: space-between;*/
-/*    align-items: center;*/
-/*    width: 80%;*/
-/*}*/

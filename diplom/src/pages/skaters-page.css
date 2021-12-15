@@ -1,0 +1,64 @@
+.skater-page {
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+}
+
+.skater-page__div {
+    display: flex;
+    position: absolute;
+}
+
+.skater-page__img {
+    display: flex;
+    position: absolute;
+    width: 100vw;
+}
+
+.skater-page__block {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+
+.skater-page__title {
+    width: 100vw;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 51px;
+}
+
+.skater-page__field {
+    width: 100vw;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    margin-top: 20px;
+}
+
+.skater-page__field_2 {
+    width: 100vw;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 19px;
+    margin-top: 110px;
+}
+
+.skater-page__button {
+    position: relative;
+    width: 200px;
+    height: 33px;
+    color: white;
+    background: #FF4A32;
+    border-radius: 35px;
+    margin-top: 150px;
+    outline: none;
+    border: none;
+}
+
+.skater-page__button:hover {
+    opacity: 0.8;
+}

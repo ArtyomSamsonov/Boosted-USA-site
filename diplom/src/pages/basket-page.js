@@ -3,6 +3,7 @@ import { Box } from '@mui/system'
 import React, { useContext } from 'react'
 import { Layout } from '../components/layout'
 import { AppContext } from '../context'
+import './basket-page.css'
 
 export const BasketPage = () => {
   const { basket, handleаIncrementQuantity, handleаDecrementQuantity } = useContext(AppContext)
@@ -13,17 +14,17 @@ export const BasketPage = () => {
     <Layout>
       <div>
         {basket?.map(product => (
-          <Box display="flex" justifyContent="space-between" alignItems="center" key={product.id} my={2} style={{ border: '1px solid #333'}}>
+          <Box className={'basket__field'} key={product.id} my={2}  >
             <Box flex={1}>
-              <Box>
-                {product.title.slice(0, 10)}
+              <Box className={'basket__field-position'}>
+                {product.title.slice(0, 40)}
               </Box>
               <Box>
-                {product.id}
+                Number of catalogue: {product.id}
               </Box>
             </Box>
             <Box display="flex" justifyContent="space-between" >
-              <Box>{product?.price * product?.quantity} руб.</Box>
+              <Box>{product?.price * product?.quantity} $ </Box>
               <Box display="flex" justifyContent="space-between" alignItems="center">
                 <Button disabled={product?.quantity <= 1} onClick={() => handleаDecrementQuantity(product)}>-</Button>
                 <Box>{product?.quantity ?? 1}</Box>
@@ -32,8 +33,8 @@ export const BasketPage = () => {
             </Box>
           </Box>
         ))}
-        <Box>
-          all Sum: {sum}
+        <Box className={'basket__sum'}>
+          Total price: {sum} $
         </Box>
       </div>
     </Layout>

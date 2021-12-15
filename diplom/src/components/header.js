@@ -10,7 +10,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 const nav = [
     {
-        to: '/',
+        to: '/skater',
         text: 'ELECTRIC SKATEBOARDS',
     },
     {
@@ -22,8 +22,8 @@ const nav = [
         text: 'CATALOGUE',
     },
     {
-        to: '/catalog',
-        text: 'GIFT CARD',
+        to: '/info',
+        text: 'MORE INFO',
     },
     {
         to: '/profile',
@@ -54,7 +54,7 @@ export const Header = () => {
                 {isAuth && <>
                     <Button onClick={onExit}>Exit</Button>
 
-                    <Button component={Link} to="/profilePage" color="primary" className='header__logo'>
+                    <Button component={Link} to="/profile" color="primary" className='header__logo'>
                         <AccountCircleIcon/>
                     </Button>
 

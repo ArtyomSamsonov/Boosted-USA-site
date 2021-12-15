@@ -8,6 +8,8 @@ import { ProtectedPage } from './components/protected-page'
 import { AppContext } from './context'
 import { ProductPage } from './pages/product-page'
 import { BasketPage } from './pages/basket-page'
+import {InfoPage} from "./pages/info-page";
+import {SkaterPage} from "./pages/skaters-page";
 
 export const RoutesMap = () => {
   const [products, setProducts] = useState()
@@ -91,6 +93,8 @@ export const RoutesMap = () => {
           </ProtectedPage>
         } />
         <Route path="/login" element={<AuthPage />} />
+        <Route path="/info" element={<InfoPage />} />
+        <Route path="/skater" element={<SkaterPage />} />
       </Routes>
     </AppContext.Provider>
   )
