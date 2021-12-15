@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 import {Button} from '@mui/material';
 import {AppContext} from '../context';
 import logo from './img/logo.png';
-import image from './img/shopping-cart-empty-side-view-svgrepo-com.svg';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 

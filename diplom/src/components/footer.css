@@ -18,10 +18,30 @@
     width: 80%;
 }
 
-.footer__block {
+.footer__block-links {
     display: flex;
     align-items: center;
     justify-content: space-around;
     background-color: #F7F7F7;
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer__block-paragraph {
+    width: 400px;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.footer__block-li {
+    list-style-type: none;
+}
+
+.footer__block-ul {
+    padding-left: 0;
+}
+
+.footer__block-a {
+    text-decoration: none;
     color: #000000;
 }

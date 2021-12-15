@@ -21,73 +21,44 @@ export const Footer = ({isMainPage}) => (
             </div>
         }
 
-        <div className="footer__block">
+        <div className="footer__block-links">
             <img src={image} alt={image}/>
             <div>
                 <h2>Explore</h2>
-                <ul>
-                    <li>
-                        <a href={'/'}>Electric skateboards</a>
+                <ul className="footer__block-ul">
+                    <li className="footer__block-li">
+                        <a className="footer__block-a" href={'/'}>Electric skateboards</a>
                     </li>
                 </ul>
-                <ul>
-                    <li>
-                        <a href={'/'}>Electric scooters</a>
+                <ul className="footer__block-ul">
+                    <li className="footer__block-li">
+                        <a className="footer__block-a" href={'/'}>Electric scooters</a>
                     </li>
                 </ul>
-                <ul>
-                    <li>
-                        <a href={'/'}>Accessories</a>
+                <ul className="footer__block-ul">
+                    <li className="footer__block-li">
+                        <a className="footer__block-a" href={'/'}>Accessories</a>
                     </li>
                 </ul>
-                <ul>
-                    <li>
-                        <a href={'/'}>Electric skateboards</a>
+                <ul className="footer__block-ul">
+                    <li className="footer__block-li">
+                        <a className="footer__block-a" href={'/'}>Electric skateboards</a>
                     </li>
                 </ul>
-                <ul>
-                    <li>
-                        <a href={'/'}>Electric skateboards</a>
+                <ul className="footer__block-ul">
+                    <li className="footer__block-li">
+                        <a className="footer__block-a" href={'/'}>Electric skateboards</a>
                     </li>
                 </ul>
-                <ul>
-                    <li>
-                        <a href={'/'}>Electric skateboards</a>
+                <ul className="footer__block-ul">
+                    <li className="footer__block-li">
+                        <a className="footer__block-a" href={'/'}>Electric skateboards</a>
                     </li>
                 </ul>
             </div>
-            <div>
+            <div className="footer__block-paragraph">
                 <h2>About Boosted USA</h2>
-                <ul>
-                    <li>
-                        <a href={'/'}>Electric skateboards</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href={'/'}>Electric scooters</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href={'/'}>Accessories</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href={'/'}>Electric skateboards</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href={'/'}>Electric skateboards</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href={'/'}>Electric skateboards</a>
-                    </li>
-                </ul>
+                <p className={'footer__paragraph'}>Boosted empowers people everywhere to commute across their cities, campuses, and communities in ways that were never before possible. Boosted is solving one of the biggest problems people face each day: transportation.</p>
             </div>
         </div>
     </div>
