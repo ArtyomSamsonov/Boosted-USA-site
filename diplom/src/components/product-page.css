@@ -1,6 +1,7 @@
 .product-page__info {
     background-color: white;
-    height: 70vh;
+    height: 75vh;
+    padding-left: 100px;
 }
 
 .product-page__img {
@@ -29,4 +30,5 @@
     background-color: #E0E3E8;
     margin-top: 0;
     border-radius: 10px;
+    width: 1000px;
 }

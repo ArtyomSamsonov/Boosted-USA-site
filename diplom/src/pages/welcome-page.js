@@ -3,7 +3,6 @@ import { Layout } from '../components/layout'
 import './welcome-page.css';
 import {Link} from 'react-router-dom';
 
-
 export const WelcomePage = () => {
     return (
     <Layout isMainPage>
@@ -20,4 +19,3 @@ export const WelcomePage = () => {
     </Layout>
   )
 }
-

@@ -1,5 +1,4 @@
 import React from 'react'
-import {styled} from '@mui/system'
 import './footer.css'
 import image from './img/Rectangle.png'
 import image_1 from "./img/1.png";
@@ -27,22 +26,22 @@ export const Footer = ({isMainPage}) => (
                 <h2>Explore</h2>
                 <ul className="footer__block-ul">
                     <li className="footer__block-li">
-                        <a className="footer__block-a" href={'/'}>Electric skateboards</a>
+                        <a className="footer__block-a" href={'/skater'}>Electric skateboards</a>
                     </li>
                 </ul>
                 <ul className="footer__block-ul">
                     <li className="footer__block-li">
-                        <a className="footer__block-a" href={'/'}>Electric scooters</a>
+                        <a className="footer__block-a" href={'/skater'}>Electric scooters</a>
                     </li>
                 </ul>
                 <ul className="footer__block-ul">
                     <li className="footer__block-li">
-                        <a className="footer__block-a" href={'/'}>Accessories</a>
+                        <a className="footer__block-a" href={'/catalog'}>Accessories</a>
                     </li>
                 </ul>
                 <ul className="footer__block-ul">
                     <li className="footer__block-li">
-                        <a className="footer__block-a" href={'/https://en.wikipedia.org/wiki/Motorized_scooter'}>FAQs</a>
+                        <a className="footer__block-a" href='https://en.wikipedia.org/wiki/Motorized_scooter' target="_blank" rel="nofollow noopener noreferrer">FAQs</a>
                     </li>
                 </ul>
                 <ul className="footer__block-ul">
@@ -52,7 +51,7 @@ export const Footer = ({isMainPage}) => (
                 </ul>
                 <ul className="footer__block-ul">
                     <li className="footer__block-li">
-                        <a className="footer__block-a" href={'https://chrome.google.com/'}>More info</a>
+                        <a className="footer__block-a" href='https://google.com/' target="_blank" rel="nofollow noopener noreferrer">Google.com</a>
                     </li>
                 </ul>
             </div>
