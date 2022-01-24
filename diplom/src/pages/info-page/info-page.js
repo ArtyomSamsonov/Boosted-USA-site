@@ -1,8 +1,8 @@
 import React from 'react'
-import { Layout } from '../components/layout'
+import { Layout } from '../../components/layout/layout'
 import './info-page.css'
-import shopboard from '../components/img/shopboards.jpg'
-import shoprev from '../components/img/shoprevs.jpg'
+import shopboard from '../../components/img/shopboards.jpg'
+import shoprev from '../../components/img/shoprevs.jpg'
 
 export const InfoPage = () => {
     return (

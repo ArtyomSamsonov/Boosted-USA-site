@@ -21,7 +21,7 @@
 }
 
 .layout__content-with-image {
-    background-image: url("./img/Rectangle.jpg");
+    background-image: url("../img/Rectangle.jpg");
     background-size: cover;
     display: block;
     flex-direction: column;

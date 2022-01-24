@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router'
-import { CatalogPage } from './pages/catalog-page'
-import { WelcomePage } from './pages/welcome-page'
-import { ProfilePage } from './pages/profile-page'
-import { AuthPage } from './pages/auth-page'
-import { ProtectedPage } from './components/protected-page'
+import { CatalogPage } from './pages/catalog-page/catalog-page'
+import { WelcomePage } from './pages/welcome-page/welcome-page'
+import { ProfilePage } from './pages/profile-page/profile-page'
+import { AuthPage } from './pages/auth-page/auth-page'
+import { ProtectedPage } from './pages/protected-page/protected-page'
 import { AppContext } from './context'
-import { ProductPage } from './pages/product-page'
-import { BasketPage } from './pages/basket-page'
-import {InfoPage} from "./pages/info-page";
-import {SkaterPage} from "./pages/skaters-page";
+import { ProductPage } from './pages/product-page/product-page'
+import { BasketPage } from './pages/basket-page/basket-page'
+import {InfoPage} from "./pages/info-page/info-page";
+import {SkaterPage} from "./pages/skaters-page/skaters-page";
 
 export const RoutesMap = () => {
   const [products, setProducts] = useState()

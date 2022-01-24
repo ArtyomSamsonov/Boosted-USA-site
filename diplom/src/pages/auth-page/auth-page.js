@@ -2,8 +2,8 @@ import { Button, TextField } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useContext, useState } from 'react'
 import { Navigate } from 'react-router'
-import { Layout } from '../components/layout'
-import { AppContext } from '../context'
+import { Layout } from '../../components/layout/layout'
+import { AppContext } from '../../context'
 import './auth-page.css'
 
 export const AuthPage = () => {

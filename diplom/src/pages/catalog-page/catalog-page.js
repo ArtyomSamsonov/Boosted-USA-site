@@ -1,6 +1,6 @@
 import React from 'react'
-import { Layout } from '../components/layout'
-import { ProductList } from '../components/product-list'
+import { Layout } from '../../components/layout/layout'
+import { ProductList } from '../../components/product-list/product-list'
 import './catalog-page.css'
 
 export const CatalogPage = () => {

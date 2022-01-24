@@ -1,10 +1,10 @@
 import React from 'react'
 import './footer.css'
-import image from './img/Rectangle.png'
-import image_1 from "./img/1.png";
-import image_2 from "./img/2.png";
-import image_3 from "./img/3.png";
-import image_4 from "./img/4.png";
+import image from '../img/Rectangle.png'
+import image_1 from "../img/1.png";
+import image_2 from "../img/2.png";
+import image_3 from "../img/3.png";
+import image_4 from "../img/4.png";
 
 export const Footer = ({isMainPage}) => (
     <div className={'footer__container'}>

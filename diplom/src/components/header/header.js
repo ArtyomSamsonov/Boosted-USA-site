@@ -3,8 +3,8 @@ import React, {useContext} from 'react'
 import {Box, styled} from '@mui/system'
 import {Link} from 'react-router-dom';
 import {Button} from '@mui/material';
-import {AppContext} from '../context';
-import logo from './img/logo.png';
+import {AppContext} from '../../context';
+import logo from '../img/logo.png';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 

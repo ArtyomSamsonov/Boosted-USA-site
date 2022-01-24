@@ -1,8 +1,8 @@
 import { Button } from '@mui/material'
 import { Box } from '@mui/system'
 import React, { useContext } from 'react'
-import { Layout } from '../components/layout'
-import { AppContext } from '../context'
+import { Layout } from '../../components/layout/layout'
+import { AppContext } from '../../context'
 import './basket-page.css'
 
 export const BasketPage = () => {

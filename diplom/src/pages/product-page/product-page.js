@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { Layout } from '../components/layout'
-import { ProductButton } from '../components/product-list'
-import { AppContext } from '../context'
-import scooter from "../components/img/scooter.jpg"
-import '../components/product-page.css'
+import { Layout } from '../../components/layout/layout'
+import { ProductButton } from '../../components/product-list/product-list'
+import { AppContext } from '../../context'
+import scooter from "../../components/img/scooter.jpg"
+import './product-page.css'
 
 export const ProductPage = ({ location }) => {
   const { products } = useContext(AppContext)

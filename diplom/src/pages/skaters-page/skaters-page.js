@@ -1,7 +1,7 @@
 import React from 'react'
-import { Layout } from '../components/layout'
+import { Layout } from '../../components/layout/layout'
 import './skaters-page.css'
-import skater from '../components/img/Elecskate.jpg'
+import skater from '../../components/img/Elecskate.jpg'
 import {Link} from 'react-router-dom';
 
 export const SkaterPage = () => {

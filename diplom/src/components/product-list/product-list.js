@@ -1,8 +1,8 @@
 import React, {useContext, useEffect} from 'react'
 import {Box, Button, Rating, Typography} from '@mui/material'
-import {AppContext} from '../context'
+import {AppContext} from '../../context'
 import {Link} from 'react-router-dom'
-import scooter from './img/scooter.jpg'
+import scooter from '../img/scooter.jpg'
 import './product-list.css'
 
 export const ProductList = ({size}) => {
@@ -11,7 +11,7 @@ export const ProductList = ({size}) => {
     useEffect(() => {
         const tryAsync = async () => {
             try {
-                const response = await fetch('https://mocki.io/v1/7983ad3b-0d7e-4a0d-aebf-c62b1e58b44f')
+                const response = await fetch('https://mocki.io/v1/590dd299-18cb-47aa-b692-22fe62e60a84')
                 const json = await response.json()
                 setProducts(json.products)
             } catch (ex) {
