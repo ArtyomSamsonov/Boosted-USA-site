@@ -4,7 +4,7 @@
 
 .welcome-page__block {
     /*position: absolute;*/
-    width: 100vw;
+    /*width: 100vw;*/
     height: 83px;
     background: #000000;
     display: flex;
