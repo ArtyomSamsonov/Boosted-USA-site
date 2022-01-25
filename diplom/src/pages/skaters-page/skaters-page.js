@@ -9,7 +9,7 @@ export const SkaterPage = () => {
         <Layout>
             <div className={'skater-page'}>
                 <div className={'skater-page__div'}>
-                    <img className={'skater-page__img'} src={skater} alt={skater}/>
+                    <div className={'container'}><img className={'skater-page__img'} src={skater} alt={skater}/></div>
                 </div>
                 <div className={'skater-page__block'}>
                     <p className={'skater-page__field'}>High-performance</p>
