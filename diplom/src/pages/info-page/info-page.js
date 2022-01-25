@@ -17,11 +17,11 @@ export const InfoPage = () => {
                 <div className={'info__block'}>
                     <div className={'block'}>
                         <h3 className={'block__title'}>Shop Boosted Boards</h3>
-                        <img src={shopboard} alt={shopboard}/>
+                        <span className={'descr'}>Shop Boosted Boards</span><img src={shopboard} alt={shopboard}/>
                     </div>
                     <div className={'block'}>
                         <h3 className={'block__title'}>Shop Boosted Revs</h3>
-                        <img src={shoprev} alt={shoprev}/>
+                        <span className={'descr'}>Shop Boosted Revs</span><img src={shoprev} alt={shoprev}/>
                     </div>
                 </div>
                 <div className={'info__block'}>

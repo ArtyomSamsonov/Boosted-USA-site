@@ -18,11 +18,14 @@
     display: block;
     flex-direction: column;
     flex: 1;
+    margin-top: 80px;
 }
 
 .layout__content-with-image {
     background-image: url("../img/Rectangle.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     display: block;
     flex-direction: column;
     flex: 1;

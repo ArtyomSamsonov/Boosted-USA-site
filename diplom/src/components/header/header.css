@@ -3,20 +3,25 @@
     color: #000000;
     background-color: white;
     font-size: 14px;
-    line-height: 21px;
+    line-height: 30px;
     font-style: normal;
     font-weight: bold;
-    margin-left: 11px;
     justify-content: space-around;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    opacity: 0.9;
 }
 
 .header__container-logo {
     align-items: center;
-    padding-top: 7px;
     padding-right: 100px;
+    height: 100%;
 }
 
-.header__logo {
-    margin: 0 10px;
+.logo {
+    align-items: center;
+    height: 60px;
+    margin-top: 10px;
 }

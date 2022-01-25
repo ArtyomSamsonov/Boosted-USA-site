@@ -38,7 +38,7 @@ export const Header = () => {
         <div className={'header__container'}>
             <div className="header__container-logo">
                 <Link to="/">
-                    <img src={logo} alt={logo}/>
+                    <img className={'logo'} src={logo} alt={logo}/>
                 </Link>
             </div>
             <Box component="nav" py={2}>

@@ -62,7 +62,7 @@ export const ProductButton = ({product}) => {
 
     return (
         <Button variant='contained' onClick={(e) => handleClick(e, product)}>
-            {isHasItem > -1 ? 'Удалить из корзины' : `в корзину ${product.price} р.`}
+            {isHasItem > -1 ? 'Удалить из корзины' : `в корзину ${product.price} $`}
         </Button>
     )
 }

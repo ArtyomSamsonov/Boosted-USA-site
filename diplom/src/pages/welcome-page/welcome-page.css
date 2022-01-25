@@ -2,12 +2,12 @@
     justify-content: center;
     text-align: center;
     color: #000000;
+    margin-top: 130px;
 }
 
 .welcome-page__title {
     font-style: normal;
     font-weight: normal;
-    width: 100vw;
     height: 51px;
     margin-top: 80px;
     font-size: 50px;
@@ -17,7 +17,6 @@
 .welcome-page__field {
     font-style: normal;
     font-weight: normal;
-    width: 100vw;
     height: 19px;
     margin-top: 15px;
     font-size: 20px;
@@ -34,9 +33,10 @@
     margin: 15px;
     outline: none;
     border: none;
-    margin-bottom: 700px;
+    margin-bottom: 68vh;
 }
 
 .welcome-page__button:hover {
-    opacity: 0.8;
+    transition: 0.5s;
+    background: grey;
 }
