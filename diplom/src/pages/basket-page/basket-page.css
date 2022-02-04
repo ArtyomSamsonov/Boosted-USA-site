@@ -1,0 +1,26 @@
+.basket__field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid white;
+    background-color: white;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    height: 100px;
+}
+
+.basket__sum {
+    background-color: white;
+    color: #FF4A32;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    height: 70px;
+}
+
+.basket__field-position {
+    font-weight: bold;
+    font-size: 30px;
+}

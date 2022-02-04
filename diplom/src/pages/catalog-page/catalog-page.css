@@ -1,0 +1,12 @@
+.catalog-page__title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #000000;
+    font-style: normal;
+    font-weight: normal;
+    width: 100vw;
+    height: 51px;
+    margin-top: 40px;
+    line-height: 51px;
+}
